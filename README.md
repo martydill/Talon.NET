@@ -9,6 +9,13 @@ It currently supports plaintext reply extraction and bruteforce signature extrac
 
 It does ***not*** yet support HTML reply extraction, machine learning signature extraction, or any other talon features.
 
+Installation
+===
+Use NuGet!
+```
+PM> install-package Talon.NET
+```
+
 Usage
 ===
 Extracting a reply from a text message:
