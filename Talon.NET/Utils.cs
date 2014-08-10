@@ -4,11 +4,11 @@ using System.Text.RegularExpressions;
 
 namespace Talon
 {
-    public static class Utils
+    internal static class Utils
     {
-        public static readonly Regex ReDelimiter = new Regex("\r?\n", RegexOptions.Compiled);
+        internal static readonly Regex ReDelimiter = new Regex("\r?\n", RegexOptions.Compiled);
         
-        public static string GetDelimiter(string msgBody)
+        internal static string GetDelimiter(string msgBody)
         {
             var match = ReDelimiter.Match(msgBody);
             if (match.Success)
@@ -16,7 +16,7 @@ namespace Talon
             return "\n";
         }
 
-        public static string[] SplitLines(this string msg)
+        internal static string[] SplitLines(this string msg)
         {
             var lines = msg.Split(new[] {"\r\n", "\r", "\n"}, StringSplitOptions.None);
 
