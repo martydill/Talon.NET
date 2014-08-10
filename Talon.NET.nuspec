@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Talon.NET</id>
+        <version>0.2</version>
+        <title>Talon.NET</title>
+        <authors>Marty Dill</authors>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Talon.net is a .NET implementation of Mailgun's awesome talon email processing library (https://github.com/mailgun/talon)</description>
+        <language>en-US</language>
+    </metadata>
+    <files>
+        <file src="lib\Talon.dll" target="lib\Talon.dll" />
+    </files>
+</package>
