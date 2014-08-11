@@ -9,6 +9,8 @@ It currently supports plaintext reply extraction and bruteforce signature extrac
 
 It does ***not*** yet support HTML reply extraction, machine learning signature extraction, or any other talon features.
 
+[![Build status](https://ci.appveyor.com/api/projects/status/t185rse890gdkcam)](https://ci.appveyor.com/project/martydill/talon-net)
+
 Installation
 ===
 Use NuGet!
