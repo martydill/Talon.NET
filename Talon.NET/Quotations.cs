@@ -14,7 +14,7 @@ namespace Talon
         (
             -*  # could include dashes
             [ ]?On[ ].*,  # date part ends with comma
-            (.*\n){0,2}  # splitter takes 4 lines at most
+            (.*\n){0,3}  # splitter takes 4 lines at most
             .*(wrote|sent):
         )";
 

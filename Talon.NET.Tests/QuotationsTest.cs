@@ -51,6 +51,27 @@ namespace Talon.Tests
         }
 
         [Test]
+        public void test_mark_message_lines_3()
+        {
+            var lines = new[]
+            {
+                "Just testing the email reply",
+                "",
+                "Robert J Samson",
+                "Sent from my iPhone",
+                "",
+                //# all 4 next lines should be marked as splitters
+                "On Nov 30, 2011, at 12:47 PM, Skapture Gmail wrapped the long string",
+                "and it run over because the string is way too long for it to handle<",
+                "416ffd3258d4d2fa4c85cfa4c44e1721d66e3e8f4@skapture-staging.mailgun.org>",
+                "wrote:",
+                "",
+                "Tarmo Lehtpuu has posted the following message on"
+            };
+            Quotations.MarkMessageLines(lines).ShouldBe("tettesssset");
+        }
+
+        [Test]
         public void test_process_marked_lines_1()
         {
             // quotations and last message lines are mixed
@@ -222,6 +243,16 @@ namespace Talon.Tests
                       "wrote:\n" +
                       "\n" +
                       "> Hi";
+
+            var msgAfterSplit = "Hello\n" +
+                                "How are you?\n" +
+                                " On Nov 30, 2011, at 12:47 PM,\n " +
+                                "Example <\n" +
+                                "416ffd3258d4d2fa4c85cfa4c44e1721d66e3e8f4\n" +
+                                "@example.org>" +
+                                "wrote:\n" +
+                                "\n" +
+                                "> Hi";
             Quotations.Preprocess(msg, "\n").ShouldBe(msg);
         }
 
